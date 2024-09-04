@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    position: relative;
 }
 
 .container {
@@ -18,25 +17,36 @@ header {
     background-color: #4CAF50;
     color: white;
     padding: 20px 0;
-    text-align: center;
-    position: relative;
+}
+
+.profile-container {
+    display: flex; /* Use flexbox to arrange the image and text */
+    align-items: center; /* Vertically center the items */
+    justify-content: flex-start; /* Align items to start (left) */
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    position: flexbox;
-    top: 10px;
-    left: 30px; 
+    margin-right: 20px; /* Add some space between the image and text */
 }
 
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 18px;
+}
 
 main {
     margin-top: 20px;
 }
 
-h1, h2, h3 {
+h2, h3 {
     margin-bottom: 10px;
     margin-top: 0;
 }
