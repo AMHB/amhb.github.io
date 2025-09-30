@@ -5,200 +5,210 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ali Mehrban — Professional Profile</title>
-  <meta name="description" content="Ali Mehrban — Telecom/Network Engineer and researcher working on Zero-Trust O-RAN security, blockchain-based supply-chain verification, and applied ML for cybersecurity." />
+  <meta name="description" content="Ali Mehrban — Senior Telecom & Network Engineer and researcher in Zero-Trust O-RAN security, blockchain supply-chain verification, and applied ML for cybersecurity." />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* minimal safety styling in case styles.css is missing */
-    :root { --text:#1b1b1b; --muted:#666; --bg:#fff; --chip:#eef2ff; --chip-text:#334155; --link:#0a66c2; }
-    * { box-sizing: border-box; }
-    body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg); }
-    header { border-bottom:1px solid #eee; }
-    .container { max-width:960px; margin:0 auto; padding:1.25rem; }
-    .profile-container { display:flex; gap:1rem; align-items:center; }
-    .profile-pic { width:110px; height:110px; border-radius:50%; object-fit:cover; }
+    /* Minimal fallback styles in case styles.css isn't present */
+    :root { --text:#1b1b1b; --muted:#606776; --bg:#fff; --link:#0a66c2; --rule:#eee; --chip:#eef2ff; --chip-text:#30364d; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--text); background:var(--bg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+    header { border-bottom:1px solid var(--rule); }
+    .container { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
+    .profile { display:flex; gap:1rem; align-items:center; }
+    .profile img { width:110px; height:110px; border-radius:50%; object-fit:cover; }
     h1 { margin:0; font-size:1.9rem; }
-    h2 { margin:1.5rem 0 .5rem; font-size:1.4rem; }
-    h3 { margin:.75rem 0 .25rem; font-size:1.05rem; }
-    nav { border-top:1px solid #eee; border-bottom:1px solid #eee; background:#fafafa; }
-    nav .navlinks { display:flex; gap:1rem; flex-wrap:wrap; }
-    nav a { color:var(--link); text-decoration:none; padding:.5rem 0; }
+    h2 { margin:1.4rem 0 .6rem; font-size:1.35rem; }
+    h3 { margin:1rem 0 .4rem; font-size:1.05rem; }
+    .tagline { color:var(--muted); margin:.25rem 0 .5rem; }
+    nav { border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); background:#fafafa; }
+    nav .links { display:flex; gap:1rem; flex-wrap:wrap; }
+    nav a { display:inline-block; padding:.55rem 0; color:var(--link); text-decoration:none; }
     section { padding:1rem 0; }
-    ul.publist { list-style:none; padding:0; margin:0; }
-    ul.publist li { padding:.75rem 0; border-bottom:1px dashed #e6e6e6; }
+    .links-row a { color:var(--link); text-decoration:none; margin-right:.9rem; }
+    .muted { color:var(--muted); }
+    .publist { list-style:none; padding:0; margin:0; }
+    .publist li { padding:.85rem 0; border-bottom:1px dashed var(--rule); }
     .title { font-weight:600; }
     .authors { color:var(--muted); }
-    .venue { font-variant:all-small-caps; letter-spacing:.3px; }
+    .venue { font-variant: all-small-caps; letter-spacing:.3px; }
     .chips { display:inline-flex; gap:.4rem; margin-left:.5rem; vertical-align:middle; }
-    .chip { background:var(--chip); color:var(--chip-text); padding:.15rem .5rem; border-radius:999px; font-size:.8rem; }
-    .links a { color:var(--link); text-decoration:none; margin-right:.75rem; }
-    .contact p { margin:.15rem 0; }
-    footer { border-top:1px solid #eee; color:var(--muted); font-size:.9rem; }
-    @media (max-width:600px){ .profile-container { flex-direction:column; align-items:flex-start; } .profile-pic{width:96px;height:96px;} }
+    .chip { background:var(--chip); color:var(--chip-text); padding:.16rem .52rem; border-radius:999px; font-size:.8rem; }
+    footer { border-top:1px solid var(--rule); color:var(--muted); font-size:.9rem; }
+    @media (max-width:640px){ .profile { flex-direction:column; align-items:flex-start; } .profile img { width:96px; height:96px; } }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <div class="profile-container">
-        <img src="https://amhb.github.io/Ali_Mehrban.jpg" alt="Portrait of Ali Mehrban" class="profile-pic" />
-        <div class="profile-info">
-          <h1>Ali Mehrban</h1>
-          <p class="tagline">Senior Telecom & Network Engineer • Researcher in Zero-Trust O-RAN Security and Applied ML</p>
-          <div class="links">
-            <a href="https://github.com/AMHB">GitHub</a>
-            <a href="https://www.linkedin.com/in/ali-mehrban/">LinkedIn</a>
-            <a href="https://scholar.google.com/scholar?hl=en&q=Ali+Mehrban">Google Scholar</a>
-            <!-- Add ORCID if you have one -->
-          </div>
+
+<header>
+  <div class="container">
+    <div class="profile">
+      <img src="https://amhb.github.io/Ali_Mehrban.jpg" alt="Portrait of Ali Mehrban" />
+      <div>
+        <h1>Ali Mehrban</h1>
+        <p class="tagline">Senior Telecom & Network Engineer • Researcher in Zero-Trust O-RAN Security and Applied ML</p>
+        <div class="links-row">
+          <a href="https://github.com/AMHB" rel="me noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/ali-mehrban/" rel="me noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/scholar?hl=en&q=Ali+Mehrban" rel="me noopener">Google Scholar</a>
+          <!-- Add ORCID/CV links if available -->
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav>
-    <div class="container navlinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<nav>
+  <div class="container links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-  <main>
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I am a telecom/network engineer with 10+ years of experience in service-provider and enterprise networks, focusing on design, optimization, and deployment. 
-          My current research centers on <strong>Zero-Trust security for O-RAN</strong>, <strong>blockchain-based supply-chain verification</strong>, and <strong>applied machine learning for cybersecurity</strong>.
-        </p>
-      </div>
-    </section>
-
-    <section id="experience" class="experience">
-      <div class="container">
-        <h2>Professional Experience</h2>
-        <h3>Telecom Network Consultant (2013 – Present)</h3>
-        <p>
-          IP-Transmission & Backhaul planning (Microwave & Fiber); MP-BGP, MPLS/VPLS, DWDM, L2/L3VPN, Segment Routing (MPLS/IPv6); access transmission optimization at MTN; 
-          cross-functional leadership for deployment & upgrades focused on reliability and QoS.
-        </p>
-      </div>
-    </section>
-
-    <section id="education" class="education">
-      <div class="container">
-        <h2>Education</h2>
-        <h3>MSc in Communications and Signal Processing — Newcastle University, UK (2010–2011)</h3>
-        <p>Thesis: “LDPC Codes in Cooperative Communications”.</p>
-      </div>
-    </section>
-
-    <section id="publications" class="publications">
-      <div class="container">
-        <h2>Publications</h2>
-
-        <!-- Published / Peer-reviewed & Preprints -->
-        <h3>Published &amp; Preprints</h3>
-        <ul class="publist">
-          <li>
-            <span class="title">A Blockchain-Enabled Multi-Layered Zero-Trust Security Framework for ORAN</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, Z. El Houda, H. Moudoud, B. Brik, L. Khoukhi</span><br />
-            <span class="venue">IEEE IWCMC</span>, 2025
-            <span class="chips"><span class="chip">Published</span></span>
-          </li>
-
-          <li>
-            <span class="title">Securing O-RAN Equipment Using Blockchain-Based Supply Chain Verification</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, Z. El Houda, H. Moudoud, B. Brik, L. Khoukhi</span><br />
-            <span class="venue">IEEE IWCMC</span>, 2025
-            <span class="chips"><span class="chip">Published</span></span>
-          </li>
-
-          <li>
-            <span class="title">Ransomware Threat Mitigation Through Network Traffic Analysis and Machine Learning Techniques</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, S. Karimi Geransayeh</span><br />
-            <span class="venue">arXiv</span>, 2401.15285 [cs.CR], 2024
-            <span class="chips"><span class="chip">Preprint</span></span>
-            <div class="links">
-              <a href="https://arxiv.org/abs/2401.15285" rel="noopener">arXiv</a>
-            </div>
-          </li>
-
-          <li>
-            <span class="title">Predicting Stock Market Trends Using Deep Learning: A Case Study of Pakistan Stock Exchange</span><br />
-            <span class="authors">M. Balouch, F. Hamayat, H. F. Abbasi, M. Q. Javed, <strong>A. Mehrban</strong>, R. F. Ahmad</span><br />
-            <span class="venue">IEEE ICOSST</span>, 2024
-            <span class="chips"><span class="chip">Published</span></span>
-          </li>
-
-          <li>
-            <span class="title">Malware Detection in IoT Systems Using Machine Learning Techniques</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
-            <span class="venue">International Journal of Wireless &amp; Mobile Networks (IJWMN)</span>, Vol.15, No.6, Dec 2023
-            <span class="chips"><span class="chip">Published</span></span>
-          </li>
-
-          <li>
-            <span class="title">An Adaptive Network-Based Approach for Advanced Forecasting of Crypto Currency Values</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
-            <span class="venue">International Journal of Computer Science &amp; Information Technology (IJCSIT)</span>, Vol.15, No.6, Dec 2023
-            <span class="chips"><span class="chip">Published</span></span>
-          </li>
-
-          <li>
-            <span class="title">Evaluating BERT and ParsBERT for Analyzing Persian Advertisement Data</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
-            <span class="venue">International Journal on Natural Language Computing (IJNLC)</span>, Vol.12, No.2, Apr 2023
-            <span class="chips"><span class="chip">Published</span></span>
-          </li>
-        </ul>
-
-        <!-- Under Review -->
-        <h3>Under Review</h3>
-        <ul class="publist">
-          <li>
-            <span class="title">ZTA-Driven Hierarchical Byzantine Consensus for Scalable O-RAN Supply Chain Security</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, Z. El Houda, H. Moudoud</span><br />
-            <span class="venue">IEEE SmartAgri &amp; SuSY</span>, 2025
-            <span class="chips"><span class="chip">Under Review</span></span>
-          </li>
-
-          <li>
-            <span class="title">Integrating Zero Trust Architecture in ORAN: A Comprehensive Survey of Challenges and Future Directions</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, Z. El Houda, H. Moudoud, L. Bao Le</span><br />
-            <span class="venue">IEEE Open Journal of Communications Society (OJCOMS)</span>, 2025
-            <span class="chips"><span class="chip">Under Review</span></span>
-          </li>
-
-          <li>
-            <span class="title">Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</span><br />
-            <span class="authors"><strong>A. Mehrban</strong>, Z. El Houda, H. Moudoud, L. Khoukhi</span><br />
-            <span class="venue">IEEE ICC</span>, 2026
-            <span class="chips"><span class="chip">Under Review</span></span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:a.mehrban@ieee.org">a.mehrban@ieee.org</a></p>
-        <p>Alt: <a href="mailto:amehrb@gmail.com">amehrb@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-mehrban/">linkedin.com/in/ali-mehrban</a></p>
-        <p>GitHub: <a href="https://github.com/AMHB">github.com/AMHB</a></p>
-        <p>Website: <a href="https://amhb.github.io">amhb.github.io</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+<main>
+  <section id="about">
     <div class="container">
-      <p>&copy; 2025 Ali Mehrban. All rights reserved.</p>
+      <h2>About Me</h2>
+      <p>
+        I am a telecom/network engineer with 10+ years of experience designing, optimizing, and deploying service-provider and enterprise networks.
+        My current research focuses on <strong>Zero-Trust security for Open RAN (O-RAN)</strong>, <strong>blockchain-based supply-chain verification</strong>, and
+        <strong>applied machine learning for cybersecurity</strong>.
+      </p>
     </div>
-  </footer>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Professional Experience</h2>
+      <h3>Telecom Network Consultant (2013–Present)</h3>
+      <p>
+        IP-Transmission & Backhaul planning (Microwave & Fiber); MP-BGP, MPLS/VPLS, DWDM, L2/L3VPN, Segment Routing (MPLS/IPv6);
+        access transmission optimization at MTN; cross-functional leadership for deployments and upgrades with emphasis on reliability and QoS.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <h3>MSc in Communications and Signal Processing — Newcastle University, UK (2010–2011)</h3>
+      <p>Thesis: “LDPC Codes in Cooperative Communications”.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+
+      <h3>Published &amp; Preprints</h3>
+      <ul class="publist">
+
+        <!-- Updated IWCMC entries with pages and DOIs -->
+        <li>
+          <span class="title">A Blockchain-Enabled Multi-Layered Zero-Trust Security Framework for O-RAN</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi</span><br />
+          <span class="venue">2025 International Wireless Communications and Mobile Computing (IWCMC)</span>, pp. 1564–1569, 2025
+          <span class="chips"><span class="chip">Published</span></span>
+          <div class="links-row">
+            <a href="https://doi.org/10.1109/IWCMC65282.2025.11059720" rel="noopener">DOI</a>
+          </div>
+        </li>
+
+        <li>
+          <span class="title">Securing O-RAN Equipment Using Blockchain-Based Supply Chain Verification</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi</span><br />
+          <span class="venue">2025 International Wireless Communications and Mobile Computing (IWCMC)</span>, pp. 1570–1575, 2025
+          <span class="chips"><span class="chip">Published</span></span>
+          <div class="links-row">
+            <a href="https://doi.org/10.1109/IWCMC65282.2025.11059692" rel="noopener">DOI</a>
+          </div>
+        </li>
+
+        <li>
+          <span class="title">Ransomware Threat Mitigation Through Network Traffic Analysis and Machine Learning Techniques</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, S. Karimi Geransayeh</span><br />
+          <span class="venue">arXiv</span>, 2401.15285 [cs.CR], 2024
+          <span class="chips"><span class="chip">Preprint</span></span>
+          <div class="links-row">
+            <a href="https://arxiv.org/abs/2401.15285" rel="noopener">arXiv</a>
+          </div>
+        </li>
+
+        <li>
+          <span class="title">Predicting Stock Market Trends Using Deep Learning: A Case Study of Pakistan Stock Exchange</span><br />
+          <span class="authors">M. Balouch, F. Hamayat, H. F. Abbasi, M. Q. Javed, <strong>A. Mehrban</strong>, R. F. Ahmad</span><br />
+          <span class="venue">IEEE ICOSST</span>, 2024
+          <span class="chips"><span class="chip">Published</span></span>
+        </li>
+
+        <li>
+          <span class="title">Malware Detection in IoT Systems Using Machine Learning Techniques</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
+          <span class="venue">International Journal of Wireless &amp; Mobile Networks (IJWMN)</span>, Vol. 15, No. 6, Dec 2023
+          <span class="chips"><span class="chip">Published</span></span>
+        </li>
+
+        <li>
+          <span class="title">An Adaptive Network-Based Approach for Advanced Forecasting of Crypto Currency Values</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
+          <span class="venue">International Journal of Computer Science &amp; Information Technology (IJCSIT)</span>, Vol. 15, No. 6, Dec 2023
+          <span class="chips"><span class="chip">Published</span></span>
+        </li>
+
+        <li>
+          <span class="title">Evaluating BERT and ParsBERT for Analyzing Persian Advertisement Data</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
+          <span class="venue">International Journal on Natural Language Computing (IJNLC)</span>, Vol. 12, No. 2, Apr 2023
+          <span class="chips"><span class="chip">Published</span></span>
+        </li>
+      </ul>
+
+      <h3>Under Review</h3>
+      <ul class="publist">
+        <li>
+          <span class="title">ZTA-Driven Hierarchical Byzantine Consensus for Scalable O-RAN Supply Chain Security</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud</span><br />
+          <span class="venue">IEEE SmartAgri &amp; SuSY</span>, 2025
+          <span class="chips"><span class="chip">Under Review</span></span>
+        </li>
+
+        <li>
+          <span class="title">Integrating Zero Trust Architecture in ORAN: A Comprehensive Survey of Challenges and Future Directions</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, L. Bao Le</span><br />
+          <span class="venue">IEEE Open Journal of Communications Society (OJCOMS)</span>, 2025
+          <span class="chips"><span class="chip">Under Review</span></span>
+        </li>
+
+        <li>
+          <span class="title">Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</span><br />
+          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, L. Khoukhi</span><br />
+          <span class="venue">IEEE ICC</span>, 2026
+          <span class="chips"><span class="chip">Under Review</span></span>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:a.mehrban@ieee.org">a.mehrban@ieee.org</a></p>
+      <p>Alt: <a href="mailto:amehrb@gmail.com">amehrb@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-mehrban/">linkedin.com/in/ali-mehrban</a></p>
+      <p>GitHub: <a href="https://github.com/AMHB">github.com/AMHB</a></p>
+      <p>Website: <a href="https://amhb.github.io">amhb.github.io</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Ali Mehrban. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
