@@ -1,216 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ali Mehrban — Professional Profile</title>
-  <meta name="description" content="Ali Mehrban — Senior Telecom & Network Engineer and researcher in B5G/6G | IIOT | Zero-Trust O-RAN Security| Blockchain Applications in Network Security | Applied ML for Cybersecurity." />
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Minimal fallback styles in case styles.css isn't present */
-    :root { --text:#1b1b1b; --muted:#606776; --bg:#fff; --link:#0a66c2; --rule:#eee; --chip:#eef2ff; --chip-text:#30364d; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--text); background:var(--bg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
-    header { border-bottom:1px solid var(--rule); }
-    .container { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
-    .profile { display:flex; gap:1rem; align-items:center; }
-    .profile img { width:110px; height:110px; border-radius:50%; object-fit:cover; }
-    h1 { margin:0; font-size:1.9rem; }
-    h2 { margin:1.4rem 0 .6rem; font-size:1.35rem; }
-    h3 { margin:1rem 0 .4rem; font-size:1.05rem; }
-    .tagline { color:var(--muted); margin:.25rem 0 .5rem; }
-    nav { border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); background:#fafafa; }
-    nav .links { display:flex; gap:1rem; flex-wrap:wrap; }
-    nav a { display:inline-block; padding:.55rem 0; color:var(--link); text-decoration:none; }
-    section { padding:1rem 0; }
-    .links-row a { color:var(--link); text-decoration:none; margin-right:.9rem; }
-    .muted { color:var(--muted); }
-    .publist { list-style:none; padding:0; margin:0; }
-    .publist li { padding:.85rem 0; border-bottom:1px dashed var(--rule); }
-    .title { font-weight:600; }
-    .authors { color:var(--muted); }
-    .venue { font-variant: all-small-caps; letter-spacing:.3px; }
-    .chips { display:inline-flex; gap:.4rem; margin-left:.5rem; vertical-align:middle; }
-    .chip { background:var(--chip); color:var(--chip-text); padding:.16rem .52rem; border-radius:999px; font-size:.8rem; }
-    footer { border-top:1px solid var(--rule); color:var(--muted); font-size:.9rem; }
-    @media (max-width:640px){ .profile { flex-direction:column; align-items:flex-start; } .profile img { width:96px; height:96px; } }
-  </style>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ali Mehrban — Professional Profile</title>
+<meta name="description" content="Ali Mehrban — Senior Telecom & Network Engineer | Research in B5G/6G, IIoT, Zero-Trust O-RAN Security, Blockchain for Network Security, and Applied ML for Cybersecurity." />
+
+<!-- ----- Base + Theme ----- -->
+<style>
+  :root{
+    --bg: #0b1020;           /* dark gradient base */
+    --bg2:#0e1328;
+    --card:#10172a80;        /* glass card */
+    --text:#e8ecf3;
+    --muted:#a6b0c3;
+    --accent:#7aa2ff;
+    --accent2:#74f0d3;
+    --rule:#1f2a44;
+    --chip:#1e2a42;
+    --chip-text:#cbd6f1;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f6f8ff;
+      --bg2:#eef2ff;
+      --card:#ffffffcc;
+      --text:#1b2538;
+      --muted:#55617a;
+      --accent:#325dff;
+      --accent2:#00bfa6;
+      --rule:#e6ebff;
+      --chip:#eef2ff;
+      --chip-text:#2b3350;
+      --shadow: 0 10px 24px rgba(28,54,90,.1);
+    }
+  }
+  [data-theme="light"]{
+    --bg:#f6f8ff; --bg2:#eef2ff; --card:#ffffffcc; --text:#1b2538; --muted:#55617a;
+    --accent:#325dff; --accent2:#00bfa6; --rule:#e6ebff; --chip:#eef2ff; --chip-text:#2b3350;
+    --shadow:0 10px 24px rgba(28,54,90,.1);
+  }
+  [data-theme="dark"]{
+    --bg:#0b1020; --bg2:#0e1328; --card:#10172a80; --text:#e8ecf3; --muted:#a6b0c3;
+    --accent:#7aa2ff; --accent2:#74f0d3; --rule:#1f2a44; --chip:#1e2a42; --chip-text:#cbd6f1;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; color:var(--text);
+    background: radial-gradient(1200px 800px at 10% -10%, rgba(122,162,255,.25), transparent 60%),
+                radial-gradient(900px 700px at 100% 0%, rgba(116,240,211,.18), transparent 70%),
+                linear-gradient(180deg,var(--bg),var(--bg2));
+    font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+  a{color:var(--accent); text-decoration:none}
+  .container{max-width:1000px; margin:0 auto; padding:1.25rem}
+
+  /* ---- Topbar ---- */
+  .topbar{
+    position:sticky; top:0; z-index:20;
+    backdrop-filter:saturate(140%) blur(10px);
+    background:linear-gradient(90deg,rgba(16,23,42,.7),rgba(16,23,42,.4));
+    border-bottom:1px solid var(--rule);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .navlinks{display:flex; gap:1rem; flex-wrap:wrap}
+  .nav a{padding:.75rem .25rem; border-bottom:2px solid transparent}
+  .nav a:hover{border-bottom-color:var(--accent)}
+
+  /* ---- Hero ---- */
+  .hero{
+    padding:2rem 0 1rem;
+    display:grid; grid-template-columns:120px 1fr auto; gap:1.25rem; align-items:center;
+  }
+  .avatar{
+    width:120px;height:120px;border-radius:50%;object-fit:cover;
+    border:3px solid transparent;
+    background:
+      linear-gradient(var(--card),var(--card)) padding-box,
+      conic-gradient(from 90deg, var(--accent), var(--accent2), var(--accent)) border-box;
+    box-shadow: var(--shadow);
+  }
+  .h1{margin:0; font-size:2rem; letter-spacing:.2px}
+  .tagline{color:var(--muted); margin:.35rem 0 .75rem}
+  .quick a{margin-right:1rem}
+  .theme-toggle{
+    border:1px solid var(--rule); background:var(--card); color:var(--text);
+    padding:.5rem .75rem; border-radius:999px; cursor:pointer;
+  }
+
+  /* ---- Cards ---- */
+  section{padding:1.25rem 0}
+  .card{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    padding:1.25rem 1.25rem;
+  }
+  .stack{display:grid; gap:1rem}
+  h2{margin:.1rem 0 .6rem; font-size:1.25rem}
+  h3{margin:.25rem 0 .25rem; font-size:1.05rem}
+
+  /* ---- Publications ---- */
+  .publist{list-style:none; margin:0; padding:0}
+  .pub{padding:1rem; border:1px solid var(--rule); border-radius:14px; background:rgba(255,255,255,.02); margin-bottom:.75rem}
+  .pub .title{font-weight:700}
+  .authors{color:var(--muted)}
+  .venue{font-variant:all-small-caps; letter-spacing:.3px}
+  .chips{display:inline-flex; gap:.4rem; margin-left:.5rem; vertical-align:middle}
+  .chip{background:var(--chip); color:var(--chip-text); padding:.18rem .56rem; border-radius:999px; font-size:.78rem}
+  .plink a{margin-right:.9rem}
+  .pub:hover{transform:translateY(-2px); transition:.18s ease; box-shadow:0 14px 32px rgba(0,0,0,.22)}
+
+  /* ---- Footer ---- */
+  footer{border-top:1px solid var(--rule); color:var(--muted); font-size:.95rem}
+
+  /* ---- Badges Row ---- */
+  .badges{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem}
+  .badge{
+    display:inline-flex; align-items:center; gap:.4rem;
+    background:linear-gradient(90deg, rgba(122,162,255,.15), rgba(116,240,211,.15));
+    padding:.3rem .6rem; border-radius:999px; border:1px solid var(--rule); font-size:.8rem;
+  }
+  .i{width:16px;height:16px; display:inline-block; vertical-align:-3px; fill:currentColor}
+
+  /* ---- Responsive ---- */
+  @media (max-width:720px){
+    .hero{grid-template-columns:80px 1fr auto}
+    .avatar{width:80px;height:80px}
+  }
+</style>
+
+<!-- ----- Icons (inline SVG sprite) ----- -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10.59 13.41a1 1 0 0 0 1.41 0l3-3a3 3 0 0 0-4.24-4.24l-1.83 1.83a1 1 0 1 1-1.41-1.41L9.35 4.76a5 5 0 1 1 7.07 7.07l-3 3a3 3 0 0 1-4.24 0 1 1 0 0 1 1.41-1.41Z"/><path d="M13.41 10.59a1 1 0 0 0-1.41 0l-3 3a3 3 0 0 0 4.24 4.24l1.83-1.83a1 1 0 1 1 1.41 1.41l-1.83 1.83a5 5 0 0 1-7.07-7.07l3-3a1 1 0 0 1 1.41 0Z"/></symbol>
+  <symbol id="i-doi" viewBox="0 0 24 24"><path d="M5 4h6a5 5 0 0 1 0 10H5V4Zm2 2v6h4a3 3 0 0 0 0-6H7Zm10 0h2v10h-2V6Zm-2 12H5v2h10v-2Z"/></symbol>
+  <symbol id="i-arxiv" viewBox="0 0 24 24"><path d="M4 4h16v2H4V4Zm0 4h16v2H4V8Zm0 4h10v2H4v-2Zm0 4h8v2H4v-2Z"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42L17.59 5H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3V6Zm2 2v8h14V8l-7 4L5 8Z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.95c.58.1.8-.25.8-.57v-2.2c-3.2.7-3.87-1.38-3.87-1.38-.53-1.35-1.3-1.7-1.3-1.7-1.07-.74.08-.73.08-.73 1.19.08 1.82 1.22 1.82 1.22 1.05 1.82 2.76 1.29 3.43.99.1-.78.41-1.3.75-1.6-2.56-.29-5.26-1.28-5.26-5.67 0-1.25.45-2.27 1.2-3.07-.12-.3-.52-1.54.12-3.2 0 0 .98-.31 3.2 1.17.93-.26 1.93-.39 2.92-.39s1.99.13 2.92.39c2.22-1.48 3.2-1.17 3.2-1.17.64 1.66.24 2.9.12 3.2.75.8 1.2 1.82 1.2 3.07 0 4.4-2.7 5.38-5.27 5.66.42.36.8 1.07.8 2.16v3.2c0 .33.22.68.8.57A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5 2.5 2.5 0 0 0 4.98 3.5ZM3 9h4v12H3V9Zm7 0h3.7v1.7h.05c.52-.98 1.78-2 3.66-2 3.92 0 4.64 2.58 4.64 5.94V21h-4v-5.1c0-1.22-.02-2.8-1.71-2.8-1.72 0-1.98 1.34-1.98 2.72V21h-4V9Z"/></symbol>
+</svg>
+
 </head>
 <body>
 
+<!-- Top Navigation -->
+<div class="topbar">
+  <div class="container nav">
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle light/dark">Toggle theme</button>
+  </div>
+</div>
+
+<!-- Hero -->
 <header>
-  <div class="container">
-    <div class="profile">
-      <img src="https://amhb.github.io/Ali_Mehrban.jpg" alt="Portrait of Ali Mehrban" />
-      <div>
-        <h1>Ali Mehrban</h1>
-        <p class="tagline">Senior Telecom & Network Engineer • Researcher in 5G/6G | IIOT | Zero-Trust O-RAN Security| Blockchain Applications in Network Security | Applied ML for Cybersecurity</p>
-        <div class="links-row">
-          <a href="https://github.com/AMHB" rel="me noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/ali-mehrban/" rel="me noopener">LinkedIn</a>
-          <a href="https://scholar.google.com/scholar?hl=en&q=Ali+Mehrban" rel="me noopener">Google Scholar</a>
-          <!-- Add ORCID/CV links if available -->
-        </div>
+  <div class="container hero">
+    <img class="avatar" src="https://amhb.github.io/Ali_Mehrban.jpg" alt="Portrait of Ali Mehrban" />
+    <div>
+      <h1 class="h1">Ali Mehrban</h1>
+      <div class="tagline">
+        Senior Telecom & Network Engineer • Researcher — 5G/6G · IIoT · Zero-Trust O-RAN · Blockchain Security · Applied ML for Cybersecurity
+      </div>
+      <div class="quick">
+        <a href="https://github.com/AMHB" rel="me noopener"><svg class="i"><use href="#i-gh"/></svg> GitHub</a>
+        <a href="https://www.linkedin.com/in/ali-mehrban/" rel="me noopener"><svg class="i"><use href="#i-li"/></svg> LinkedIn</a>
+        <a href="https://scholar.google.com/scholar?hl=en&q=Ali+Mehrban" rel="me noopener"><svg class="i"><use href="#i-ext"/></svg> Google Scholar</a>
+      </div>
+
+      <div class="badges" aria-label="research topics">
+        <span class="badge">Zero-Trust O-RAN</span>
+        <span class="badge">Blockchain & Supply-Chain</span>
+        <span class="badge">IIoT Security</span>
+        <span class="badge">Applied ML</span>
       </div>
     </div>
   </div>
 </header>
 
-<nav>
-  <div class="container links">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<main class="container stack">
 
-<main>
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am a telecom/network engineer with 10+ years of experience designing, optimizing, and deploying service-provider and enterprise networks.
-        My current research focuses on B5G/6G | IIOT | Zero-Trust O-RAN Security| Blockchain Applications in Network Security | Applied ML for Cybersecurity.
-      </p>
-    </div>
+  <!-- About -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I am a telecom/network engineer with 10+ years of experience designing, optimizing, and deploying service-provider and enterprise networks.
+      My current research focuses on <strong>B5G/6G</strong>, <strong>IIoT security</strong>, <strong>Zero-Trust O-RAN</strong>,
+      <strong>blockchain-based supply-chain verification</strong>, and <strong>applied machine learning for cybersecurity</strong>.
+    </p>
   </section>
 
-  <section id="experience">
-    <div class="container">
-      <h2>Professional Experience</h2>
-      <h3>Telecom Network Consultant (2013–Present)</h3>
-      <p>
-        IP-Transmission & Backhaul planning (Microwave & Fiber); MP-BGP, MPLS/VPLS, DWDM, L2/L3VPN, Segment Routing (MPLS/IPv6);
-        access transmission optimization at MTN; cross-functional leadership for deployments and upgrades with emphasis on reliability and QoS.
-      </p>
-    </div>
+  <!-- Experience -->
+  <section id="experience" class="card">
+    <h2>Professional Experience</h2>
+    <h3>Telecom Network Consultant (2013–Present)</h3>
+    <p>
+      IP-Transmission & Backhaul planning (Microwave & Fiber); MP-BGP, MPLS/VPLS, DWDM, L2/L3VPN, Segment Routing (MPLS/IPv6);
+      access transmission optimization at MTN; cross-functional leadership for deployments and upgrades with emphasis on reliability and QoS.
+    </p>
   </section>
 
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <h3>MSc in Communications and Signal Processing — Newcastle University, UK (2010–2011)</h3>
-      <p>Thesis: “LDPC Codes in Cooperative Communications”.</p>
-    </div>
+  <!-- Education -->
+  <section id="education" class="card">
+    <h2>Education</h2>
+    <h3>MSc in Communications and Signal Processing — Newcastle University, UK (2010–2011)</h3>
+    <p>Thesis: “LDPC Codes in Cooperative Communications”.</p>
   </section>
 
-  <section id="publications">
-    <div class="container">
-      <h2>Publications</h2>
+  <!-- Publications -->
+  <section id="publications" class="card">
+    <h2>Publications</h2>
 
-      <h3>Published &amp; Preprints</h3>
-      <ul class="publist">
+    <h3>Published &amp; Preprints</h3>
+    <ul class="publist">
 
-        <!-- Updated IWCMC entries with pages and DOIs -->
-        <li>
-          <span class="title">A Blockchain-Enabled Multi-Layered Zero-Trust Security Framework for O-RAN</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi</span><br />
-          <span class="venue">2025 International Wireless Communications and Mobile Computing (IWCMC)</span>, pp. 1564–1569, 2025
+      <li class="pub">
+        <div class="title">A Blockchain-Enabled Multi-Layered Zero-Trust Security Framework for O-RAN</div>
+        <div class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi</div>
+        <div class="venue">2025 International Wireless Communications and Mobile Computing (IWCMC)</div>
+        <div>pp. 1564–1569, 2025
           <span class="chips"><span class="chip">Published</span></span>
-          <div class="links-row">
-            <a href="https://doi.org/10.1109/IWCMC65282.2025.11059720" rel="noopener">DOI</a>
-          </div>
-        </li>
+        </div>
+        <div class="plink">
+          <a href="https://doi.org/10.1109/IWCMC65282.2025.11059720"><svg class="i"><use href="#i-doi"/></svg> DOI</a>
+        </div>
+      </li>
 
-        <li>
-          <span class="title">Securing O-RAN Equipment Using Blockchain-Based Supply Chain Verification</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi</span><br />
-          <span class="venue">2025 International Wireless Communications and Mobile Computing (IWCMC)</span>, pp. 1570–1575, 2025
+      <li class="pub">
+        <div class="title">Securing O-RAN Equipment Using Blockchain-Based Supply Chain Verification</div>
+        <div class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi</div>
+        <div class="venue">2025 International Wireless Communications and Mobile Computing (IWCMC)</div>
+        <div>pp. 1570–1575, 2025
           <span class="chips"><span class="chip">Published</span></span>
-          <div class="links-row">
-            <a href="https://doi.org/10.1109/IWCMC65282.2025.11059692" rel="noopener">DOI</a>
-          </div>
-        </li>
+        </div>
+        <div class="plink">
+          <a href="https://doi.org/10.1109/IWCMC65282.2025.11059692"><svg class="i"><use href="#i-doi"/></svg> DOI</a>
+        </div>
+      </li>
 
-        <li>
-          <span class="title">Ransomware Threat Mitigation Through Network Traffic Analysis and Machine Learning Techniques</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, S. Karimi Geransayeh</span><br />
-          <span class="venue">arXiv</span>, 2401.15285 [cs.CR], 2024
+      <li class="pub">
+        <div class="title">Ransomware Threat Mitigation Through Network Traffic Analysis and Machine Learning Techniques</div>
+        <div class="authors"><strong>A. Mehrban</strong>, S. Karimi Geransayeh</div>
+        <div class="venue">arXiv</div>
+        <div>2401.15285 [cs.CR], 2024
           <span class="chips"><span class="chip">Preprint</span></span>
-          <div class="links-row">
-            <a href="https://arxiv.org/abs/2401.15285" rel="noopener">arXiv</a>
-          </div>
-        </li>
+        </div>
+        <div class="plink">
+          <a href="https://arxiv.org/abs/2401.15285"><svg class="i"><use href="#i-arxiv"/></svg> arXiv</a>
+        </div>
+      </li>
 
-        <li>
-          <span class="title">Predicting Stock Market Trends Using Deep Learning: A Case Study of Pakistan Stock Exchange</span><br />
-          <span class="authors">M. Balouch, F. Hamayat, H. F. Abbasi, M. Q. Javed, <strong>A. Mehrban</strong>, R. F. Ahmad</span><br />
-          <span class="venue">IEEE ICOSST</span>, 2024
+      <li class="pub">
+        <div class="title">Predicting Stock Market Trends Using Deep Learning: A Case Study of Pakistan Stock Exchange</div>
+        <div class="authors">M. Balouch, F. Hamayat, H. F. Abbasi, M. Q. Javed, <strong>A. Mehrban</strong>, R. F. Ahmad</div>
+        <div class="venue">IEEE ICOSST</div>
+        <div>2024 <span class="chips"><span class="chip">Published</span></span></div>
+      </li>
+
+      <li class="pub">
+        <div class="title">Malware Detection in IoT Systems Using Machine Learning Techniques</div>
+        <div class="authors"><strong>A. Mehrban</strong>, P. Ahadian</div>
+        <div class="venue">International Journal of Wireless &amp; Mobile Networks (IJWMN)</div>
+        <div>Vol. 15, No. 6, Dec 2023
           <span class="chips"><span class="chip">Published</span></span>
-        </li>
+        </div>
+      </li>
 
-        <li>
-          <span class="title">Malware Detection in IoT Systems Using Machine Learning Techniques</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
-          <span class="venue">International Journal of Wireless &amp; Mobile Networks (IJWMN)</span>, Vol. 15, No. 6, Dec 2023
+      <li class="pub">
+        <div class="title">An Adaptive Network-Based Approach for Advanced Forecasting of Crypto Currency Values</div>
+        <div class="authors"><strong>A. Mehrban</strong>, P. Ahadian</div>
+        <div class="venue">International Journal of Computer Science &amp; Information Technology (IJCSIT)</div>
+        <div>Vol. 15, No. 6, Dec 2023
           <span class="chips"><span class="chip">Published</span></span>
-        </li>
+        </div>
+      </li>
 
-        <li>
-          <span class="title">An Adaptive Network-Based Approach for Advanced Forecasting of Crypto Currency Values</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
-          <span class="venue">International Journal of Computer Science &amp; Information Technology (IJCSIT)</span>, Vol. 15, No. 6, Dec 2023
+      <li class="pub">
+        <div class="title">Evaluating BERT and ParsBERT for Analyzing Persian Advertisement Data</div>
+        <div class="authors"><strong>A. Mehrban</strong>, P. Ahadian</div>
+        <div class="venue">International Journal on Natural Language Computing (IJNLC)</div>
+        <div>Vol. 12, No. 2, Apr 2023
           <span class="chips"><span class="chip">Published</span></span>
-        </li>
+        </div>
+      </li>
 
-        <li>
-          <span class="title">Evaluating BERT and ParsBERT for Analyzing Persian Advertisement Data</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, P. Ahadian</span><br />
-          <span class="venue">International Journal on Natural Language Computing (IJNLC)</span>, Vol. 12, No. 2, Apr 2023
-          <span class="chips"><span class="chip">Published</span></span>
-        </li>
-      </ul>
+    </ul>
 
-      <h3>Under Review</h3>
-      <ul class="publist">
-        <li>
-          <span class="title">ZTA-Driven Hierarchical Byzantine Consensus for Scalable O-RAN Supply Chain Security</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud</span><br />
-          <span class="venue">IEEE SmartAgri &amp; SuSY</span>, 2025
-          <span class="chips"><span class="chip">Under Review</span></span>
-        </li>
+    <h3>Under Review</h3>
+    <ul class="publist">
 
-        <li>
-          <span class="title">Integrating Zero Trust Architecture in ORAN: A Comprehensive Survey of Challenges and Future Directions</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, L. Bao Le</span><br />
-          <span class="venue">IEEE Open Journal of Communications Society (OJCOMS)</span>, 2025
-          <span class="chips"><span class="chip">Under Review</span></span>
-        </li>
+      <li class="pub">
+        <div class="title">ZTA-Driven Hierarchical Byzantine Consensus for Scalable O-RAN Supply Chain Security</div>
+        <div class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud</div>
+        <div class="venue">IEEE SmartAgri &amp; SuSY</div>
+        <div>2025 <span class="chips"><span class="chip">Under Review</span></span></div>
+      </li>
 
-        <li>
-          <span class="title">Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</span><br />
-          <span class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, L. Khoukhi</span><br />
-          <span class="venue">IEEE ICC</span>, 2026
-          <span class="chips"><span class="chip">Under Review</span></span>
-        </li>
-      </ul>
+      <li class="pub">
+        <div class="title">Integrating Zero Trust Architecture in ORAN: A Comprehensive Survey of Challenges and Future Directions</div>
+        <div class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, L. Bao Le</div>
+        <div class="venue">IEEE Open Journal of Communications Society (OJCOMS)</div>
+        <div>2025 <span class="chips"><span class="chip">Under Review</span></span></div>
+      </li>
 
-    </div>
+      <li class="pub">
+        <div class="title">Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</div>
+        <div class="authors"><strong>A. Mehrban</strong>, Z. Abou El Houda, H. Moudoud, L. Khoukhi</div>
+        <div class="venue">IEEE ICC</div>
+        <div>2026 <span class="chips"><span class="chip">Under Review</span></span></div>
+      </li>
+
+    </ul>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:a.mehrban@ieee.org">a.mehrban@ieee.org</a></p>
-      <p>Alt: <a href="mailto:amehrb@gmail.com">amehrb@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-mehrban/">linkedin.com/in/ali-mehrban</a></p>
-      <p>GitHub: <a href="https://github.com/AMHB">github.com/AMHB</a></p>
-      <p>Website: <a href="https://amhb.github.io">amhb.github.io</a></p>
-    </div>
+  <!-- Contact -->
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p><svg class="i"><use href="#i-mail"/></svg> <a href="mailto:a.mehrban@ieee.org">a.mehrban@ieee.org</a></p>
+    <p><svg class="i"><use href="#i-mail"/></svg> <a href="mailto:amehrb@gmail.com">amehrb@gmail.com</a></p>
+    <p><svg class="i"><use href="#i-li"/></svg> <a href="https://www.linkedin.com/in/ali-mehrban/">linkedin.com/in/ali-mehrban</a></p>
+    <p><svg class="i"><use href="#i-gh"/></svg> <a href="https://github.com/AMHB">github.com/AMHB</a></p>
+    <p><svg class="i"><use href="#i-link"/></svg> <a href="https://amhb.github.io">amhb.github.io</a></p>
   </section>
+
 </main>
 
 <footer>
-  <div class="container">
+  <div class="container" style="padding:1.25rem 0;">
     <p>&copy; 2025 Ali Mehrban. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- ---- Theme toggle script ---- -->
+<script>
+  (function(){
+    const btn = document.getElementById('themeBtn');
+    const key = 'ali-theme';
+    const root = document.documentElement;
+
+    function setTheme(t){
+      root.setAttribute('data-theme', t);
+      localStorage.setItem(key, t);
+    }
+    const saved = localStorage.getItem(key);
+    if(saved){ setTheme(saved); }
+
+    btn.addEventListener('click',()=>{
+      const cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
+      setTheme(cur === 'dark' ? 'light' : 'dark');
+    });
+  })();
+</script>
+
 </body>
 </html>
-
-
-
