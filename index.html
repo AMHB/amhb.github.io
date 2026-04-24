@@ -16,8 +16,8 @@
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f2f4f7;   /* soft neutral – not stark white */
-    color: #1a1a1a;
+    background-color: #0a0a0a;   /* deep black */
+    color: #f0f0f0;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
@@ -29,14 +29,14 @@
     padding: 60px 20px;
   }
 
-  /* ----- Sticky top bar – muted glass effect ----- */
+  /* ----- Sticky top bar – dark glass ----- */
   .topbar {
     position: sticky;
     top: 0;
     z-index: 10;
     backdrop-filter: saturate(120%) blur(18px);
-    background-color: rgba(242, 244, 247, 0.8);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: rgba(10, 10, 10, 0.82);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .nav-container {
@@ -55,7 +55,7 @@
   }
 
   .nav-links a {
-    color: #2c3e50;
+    color: #cccccc;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -65,9 +65,10 @@
 
   .nav-links a:hover {
     opacity: 1;
+    color: #ffffff;
   }
 
-  /* ----- Hero section – calmer contrast ----- */
+  /* ----- Hero section ----- */
   .hero {
     text-align: center;
     padding: 80px 20px 50px;
@@ -79,8 +80,8 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 28px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    border: 2px solid #dce1e6;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #2a2a2a;
   }
 
   .hero h1 {
@@ -88,12 +89,12 @@
     font-weight: 600;
     letter-spacing: -0.8px;
     margin-bottom: 10px;
-    color: #1a1a1a;
+    color: #ffffff;
   }
 
   .hero .tagline {
     font-size: 18px;
-    color: #4a5568;
+    color: #b0b0b0;
     max-width: 720px;
     margin: 0 auto 28px;
     line-height: 1.5;
@@ -107,7 +108,7 @@
   }
 
   .quick-links a {
-    color: #2b5876;
+    color: #7aa2ff;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
@@ -116,8 +117,8 @@
   }
 
   .quick-links a:hover {
-    color: #1e3b4f;
-    border-bottom-color: #2b5876;
+    color: #a0c4ff;
+    border-bottom-color: #7aa2ff;
   }
 
   .badges {
@@ -128,14 +129,14 @@
   }
 
   .badge {
-    background-color: #ffffff;
-    border: 1px solid #dde2e8;
+    background-color: #1c1c1e;
+    border: 1px solid #2a2a2a;
     padding: 6px 18px;
     border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
-    color: #2d3748;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    color: #dddddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
 
   /* ----- Section headers with thin muted lines ----- */
@@ -150,24 +151,24 @@
     font-size: 28px;
     font-weight: 600;
     letter-spacing: -0.4px;
-    color: #1a1a1a;
+    color: #ffffff;
     white-space: nowrap;
   }
 
   .section-header .line {
     flex-grow: 1;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.1);
     margin-top: 6px;
   }
 
-  /* ----- Cards – softly toned background ----- */
+  /* ----- Cards – dark surface ----- */
   .card {
-    background: #fcfcfd;
+    background: #141414;
     border-radius: 16px;
     padding: 36px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
-    border: 1px solid #e8ecf0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #222222;
     margin-bottom: 48px;
   }
 
@@ -175,20 +176,20 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #1a1a1a;
+    color: #ffffff;
   }
 
   .card p,
   .card li {
-    color: #2d3748;
+    color: #cccccc;
     font-size: 16px;
     line-height: 1.7;
   }
 
-  /* ----- Publication items – light separators ----- */
+  /* ----- Publication items ----- */
   .pub {
     padding: 20px 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #2a2a2a;
   }
 
   .pub:last-child {
@@ -197,18 +198,18 @@
 
   .pub strong {
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffffff;
   }
 
   .pub .meta {
-    color: #5a6775;
+    color: #aaaaaa;
     font-size: 14px;
     display: block;
     margin: 4px 0;
   }
 
   .pub a {
-    color: #2b5876;
+    color: #7aa2ff;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -218,29 +219,29 @@
   }
 
   .pub a:hover {
-    border-bottom-color: #2b5876;
+    border-bottom-color: #7aa2ff;
   }
 
   .pub .chip {
     display: inline-block;
-    background: #eef1f5;
+    background: #2a2a2a;
     padding: 2px 12px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 500;
-    color: #3d4a5c;
+    color: #cccccc;
     margin-left: 6px;
   }
 
   /* ----- Contact ----- */
   .contact-info p {
     font-size: 16px;
-    color: #2d3748;
+    color: #cccccc;
     margin-bottom: 8px;
   }
 
   .contact-info a {
-    color: #2b5876;
+    color: #7aa2ff;
     text-decoration: none;
   }
 
@@ -251,10 +252,10 @@
   /* ----- Footer ----- */
   footer {
     text-align: center;
-    color: #667a8c;
+    color: #777777;
     font-size: 13px;
     padding: 30px 0;
-    border-top: 1px solid #dde2e8;
+    border-top: 1px solid #222222;
     margin-top: 20px;
   }
 
@@ -282,6 +283,7 @@
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#publications">Publications</a>
+      <a href="https://github.com/AMHB?tab=repositories" target="_blank" rel="noopener">My Repositories</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -312,7 +314,7 @@
 
 <main class="container">
 
-  <!-- About -->
+  <!-- About – now starts with "I am" and highlights DetNet/TSN -->
   <section id="about">
     <div class="section-header">
       <h2>About Me</h2>
@@ -320,10 +322,10 @@
     </div>
     <div class="card">
       <p>
-        With over 12 years of experience as a Service Provider Network Engineer, my expertise encompasses IP transmission (via microwave PTP/PTMP and fiber [DWDM, xPON]), backhaul network planning, and the architecture of large-scale service provider networks. My technical background covers routing (OSPF, IS-IS, BGP, EIGRP, Segment Routing), switching, MPLS, VPN, QoS, and network security, with proficiency in equipment from industry leaders such as Ericsson, Cisco, and Huawei. I am highly skilled in network automation and programmability (Ansible, Python [Netmiko/Paramiko]) and hold certifications in AI, machine learning, and data analysis.
+        I am a service provider network engineer with over 12 years of hands‑on experience in IP transmission (microwave PTP/PTMP and fiber [DWDM, xPON]), backhaul planning, and large‑scale network architecture. My technical toolkit spans routing (OSPF, IS-IS, BGP, EIGRP, Segment Routing), switching, MPLS, VPNs, QoS, and security, and I work comfortably with gear from Ericsson, Cisco, and Huawei. I’m also deep into network automation with Ansible and Python (Netmiko/Paramiko) and keep my skills sharp with certifications in AI, machine learning, and data analysis.
       </p>
       <p style="margin-top:18px;">
-        Alongside my professional responsibilities, I am deeply committed to research that bridges cutting-edge industry practice and academic innovation. My current interests lie in deterministic networking (DetNet/TSN) for O‑RAN xHaul, bounded‑latency transport over SRv6, and performance‑aware service orchestration at the edge. I explore how heterogeneous transport domains – from fronthaul to edge cloud – can provide predictable delay and jitter guarantees for next‑generation O‑RAN and 6G systems. My earlier contributions include multiple recognised publications in IEEE journals, magazines, and conferences on O‑RAN security, AI/ML, and blockchain.
+        My research passion lies squarely in <strong>deterministic networking and Time‑Sensitive Networking (DetNet/TSN)</strong> – that’s the core of what I tinker with and publish on. I explore how to bring bounded‑latency transport over SRv6 and performance‑aware service orchestration into O‑RAN xHaul and edge‑cloud environments, aiming for predictable delay and jitter guarantees in 6G systems. Alongside that main thread, I’ve contributed to multiple IEEE venues on O‑RAN security, AI/ML, and blockchain.
       </p>
     </div>
   </section>
@@ -362,7 +364,7 @@
       <div class="line"></div>
     </div>
     <div class="card">
-      <h3 style="font-size:22px; margin-bottom:20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;">Published &amp; Preprints</h3>
+      <h3 style="font-size:22px; margin-bottom:20px; border-bottom: 1px solid #2a2a2a; padding-bottom: 12px;">Published &amp; Preprints</h3>
 
       <div class="pub">
         <strong>Enhancing Spectral Efficiency and Resilience in SAGIN‑ITS: An IRS‑Assisted Semantic Offloading Framework</strong>
@@ -430,7 +432,7 @@
         <span class="chip">Published</span>
       </div>
 
-      <h3 style="font-size:22px; margin: 36px 0 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;">Under Review</h3>
+      <h3 style="font-size:22px; margin: 36px 0 20px; border-bottom: 1px solid #2a2a2a; padding-bottom: 12px;">Under Review</h3>
       <div class="pub">
         <strong>Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</strong>
         <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud, L. Khoukhi — IEEE ICC, 2026</span>
