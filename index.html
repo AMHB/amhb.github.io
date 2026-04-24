@@ -7,7 +7,7 @@
 <title>Ali Mehrban — Professional Profile</title>
 <meta name="description" content="Ali Mehrban — Senior Telecom & Network Engineer | Research in B5G/6G, IIoT, Zero-Trust O-RAN Security, Blockchain for Network Security, and Applied ML for Cybersecurity." />
 
-<!-- Apple‑style typography & base styles -->
+<!-- Apple‑style typography & layout -->
 <style>
   * {
     margin: 0;
@@ -25,18 +25,18 @@
 
   .container {
     width: 90%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 60px 20px;
   }
 
-  /* ----- Sticky top bar with blur (Apple style) ----- */
+  /* ----- Sticky top bar (Apple style) ----- */
   .topbar {
     position: sticky;
     top: 0;
     z-index: 10;
     backdrop-filter: saturate(180%) blur(20px);
-    background-color: rgba(245, 245, 247, 0.8);
+    background-color: rgba(245, 245, 247, 0.82);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
@@ -44,15 +44,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
-    height: 48px;
+    padding: 0 28px;
+    height: 52px;
   }
 
   .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 32px;
   }
 
   .nav-links a {
@@ -66,13 +66,12 @@
 
   .nav-links a:hover {
     opacity: 1;
-    text-decoration: none;
   }
 
   /* ----- Hero section ----- */
   .hero {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 80px 20px 50px;
   }
 
   .avatar {
@@ -80,30 +79,31 @@
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 28px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   }
 
   .hero h1 {
-    font-size: 38px;
+    font-size: 44px;
     font-weight: 600;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
     color: #1d1d1f;
   }
 
   .hero .tagline {
-    font-size: 17px;
-    color: #86868b;
-    max-width: 600px;
-    margin: 0 auto 24px;
+    font-size: 18px;
+    color: #6e6e73;
+    max-width: 700px;
+    margin: 0 auto 28px;
+    line-height: 1.5;
   }
 
   .quick-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 32px;
+    margin-bottom: 32px;
   }
 
   .quick-links a {
@@ -123,13 +123,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .badge {
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 6px 16px;
+    padding: 7px 18px;
     border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
@@ -137,44 +137,56 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   }
 
-  /* ----- Section cards (Apple style) ----- */
-  section {
-    margin-bottom: 36px;
+  /* ----- Section layout with thin lines ----- */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
   }
 
-  section h2 {
-    font-size: 26px;
+  .section-header h2 {
+    font-size: 28px;
     font-weight: 600;
-    letter-spacing: -0.3px;
-    margin-bottom: 16px;
+    letter-spacing: -0.4px;
     color: #1d1d1f;
+    white-space: nowrap;
   }
 
+  .section-header .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 6px;
+  }
+
+  /* ----- Cards ----- */
   .card {
     background: #ffffff;
-    border-radius: 16px;
-    padding: 32px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 48px;
   }
 
   .card h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    color: #1d1d1f;
   }
 
   .card p, .card li {
     color: #3a3a3c;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
   }
 
-  /* ----- Publication list items ----- */
+  /* ----- Publication items ----- */
   .pub {
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
 
   .pub:last-child {
@@ -187,15 +199,18 @@
   }
 
   .pub .meta {
-    color: #86868b;
+    color: #6e6e73;
     font-size: 14px;
+    display: block;
+    margin: 4px 0;
   }
 
   .pub a {
     color: #0071e3;
     text-decoration: none;
-    margin-left: 6px;
     font-weight: 500;
+    font-size: 14px;
+    margin-right: 8px;
   }
 
   .pub a:hover {
@@ -213,9 +228,9 @@
     margin-left: 6px;
   }
 
-  /* ----- Contact icons & links ----- */
+  /* ----- Contact ----- */
   .contact-info p {
-    font-size: 15px;
+    font-size: 16px;
     color: #3a3a3c;
     margin-bottom: 8px;
   }
@@ -232,20 +247,23 @@
   /* ----- Footer ----- */
   footer {
     text-align: center;
-    color: #86868b;
+    color: #6e6e73;
     font-size: 13px;
     padding: 30px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   /* ----- Responsive ----- */
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     .hero h1 {
-      font-size: 30px;
+      font-size: 34px;
     }
     .card {
-      padding: 24px;
+      padding: 28px;
+    }
+    .section-header h2 {
+      font-size: 24px;
     }
   }
 </style>
@@ -270,7 +288,7 @@
   <img class="avatar" src="https://amhb.github.io/Ali_Mehrban.jpg" alt="Ali Mehrban" />
   <h1>Ali Mehrban</h1>
   <p class="tagline">
-    Senior Telecom & Network Engineer • Researcher — 5G/6G · IIoT · Zero-Trust O-RAN · Blockchain Security · Applied ML for Cybersecurity
+    Senior Telecom & Network Engineer • Researcher — Det‑Net/TSN, O‑RAN, x‑Haul, SRv6, Service Orchestration, Edge Computing, and Semantic Communications
   </p>
   <div class="quick-links">
     <a href="https://github.com/AMHB" target="_blank" rel="noopener">GitHub</a>
@@ -278,13 +296,13 @@
     <a href="https://scholar.google.com/scholar?hl=en&q=Ali+Mehrban" target="_blank" rel="noopener">Google Scholar</a>
   </div>
   <div class="badges">
-    <span class="badge">Zero-Trust O-RAN</span>
-    <span class="badge">Blockchain & Supply‑Chain</span>
-    <span class="badge">IIoT Security</span>
-    <span class="badge">Applied ML</span>
-    <span class="badge">SAGIN‑ITS</span>
-    <span class="badge">Semantic Offloading</span>
-    <span class="badge">IRS</span>
+    <span class="badge">Det‑Net / TSN</span>
+    <span class="badge">O‑RAN</span>
+    <span class="badge">x‑Haul</span>
+    <span class="badge">SRv6</span>
+    <span class="badge">Service Orchestration</span>
+    <span class="badge">Edge Computing</span>
+    <span class="badge">Semantic Communications</span>
   </div>
 </header>
 
@@ -292,12 +310,15 @@
 
   <!-- About -->
   <section id="about">
-    <h2>About Me</h2>
+    <div class="section-header">
+      <h2>About Me</h2>
+      <div class="line"></div>
+    </div>
     <div class="card">
       <p>
         With over 12 years of experience as a Service Provider Network Engineer, my expertise encompasses IP transmission (via microwave PTP/PTMP and fiber [DWDM, xPON]), backhaul network planning, and the architecture of large-scale service provider networks. My technical background covers routing (OSPF, IS-IS, BGP, EIGRP, Segment Routing), switching, MPLS, VPN, QoS, and network security, with proficiency in equipment from industry leaders such as Ericsson, Cisco, and Huawei. I am highly skilled in network automation and programmability (Ansible, Python [Netmiko/Paramiko]) and hold certifications in AI, machine learning, and data analysis.
       </p>
-      <p style="margin-top:16px;">
+      <p style="margin-top:18px;">
         Alongside my professional responsibilities, I am deeply committed to research that bridges cutting-edge industry practice and academic innovation. My current interests lie in deterministic networking (DetNet/TSN) for O‑RAN xHaul, bounded‑latency transport over SRv6, and performance‑aware service orchestration at the edge. I explore how heterogeneous transport domains – from fronthaul to edge cloud – can provide predictable delay and jitter guarantees for next‑generation O‑RAN and 6G systems. My earlier contributions include multiple recognised publications in IEEE journals, magazines, and conferences on O‑RAN security, AI/ML, and blockchain.
       </p>
     </div>
@@ -305,7 +326,10 @@
 
   <!-- Experience -->
   <section id="experience">
-    <h2>Professional Experience</h2>
+    <div class="section-header">
+      <h2>Experience</h2>
+      <div class="line"></div>
+    </div>
     <div class="card">
       <h3>Telecom Network Consultant (2013–Present)</h3>
       <p>
@@ -317,7 +341,10 @@
 
   <!-- Education -->
   <section id="education">
-    <h2>Education</h2>
+    <div class="section-header">
+      <h2>Education</h2>
+      <div class="line"></div>
+    </div>
     <div class="card">
       <h3>MSc in Communications and Signal Processing — Newcastle University, UK (2010–2011)</h3>
       <p>Thesis: “LDPC Codes in Cooperative Communications”.</p>
@@ -326,79 +353,82 @@
 
   <!-- Publications -->
   <section id="publications">
-    <h2>Publications</h2>
+    <div class="section-header">
+      <h2>Publications</h2>
+      <div class="line"></div>
+    </div>
     <div class="card">
-      <h3 style="font-size:20px; margin-bottom:16px;">Published &amp; Preprints</h3>
+      <h3 style="font-size:22px; margin-bottom:20px; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 12px;">Published &amp; Preprints</h3>
 
       <div class="pub">
-        <strong>Enhancing Spectral Efficiency and Resilience in SAGIN‑ITS: An IRS‑Assisted Semantic Offloading Framework</strong><br />
+        <strong>Enhancing Spectral Efficiency and Resilience in SAGIN‑ITS: An IRS‑Assisted Semantic Offloading Framework</strong>
         <span class="meta">A. Mehrban et al. — IEEE Internet of Things Magazine (Early Access), April 2026</span>
         <a href="https://ieeexplore.ieee.org/document/11482062/" target="_blank" rel="noopener">IEEE Xplore</a>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>Integrating Zero Trust Architecture in O‑RAN: A Comprehensive Survey and Analysis</strong><br />
-        <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud, L. Bao Le — IEEE Open Journal of the Communications Society (OJCOMS), Dec. 2025</span>
+        <strong>Integrating Zero Trust Architecture in O‑RAN: A Comprehensive Survey and Analysis</strong>
+        <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud, L. Bao Le — IEEE OJCOMS, Dec. 2025</span>
         <a href="https://ieeexplore.ieee.org/document/11299597/" target="_blank" rel="noopener">IEEE Xplore</a>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>ZTA‑Driven Hierarchical Byzantine Consensus for Scalable O‑RAN Supply Chain Security</strong><br />
-        <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud — 2025 IEEE SmartAgri &amp; SuSY, Dec. 2025, Marrakech</span>
+        <strong>ZTA‑Driven Hierarchical Byzantine Consensus for Scalable O‑RAN Supply Chain Security</strong>
+        <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud — IEEE SmartAgri & SuSY, Dec. 2025, Marrakech</span>
         <a href="https://ieeexplore.ieee.org/document/11466868/" target="_blank" rel="noopener">IEEE Xplore</a>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>A Blockchain-Enabled Multi-Layered Zero-Trust Security Framework for O-RAN</strong><br />
+        <strong>A Blockchain-Enabled Multi-Layered Zero-Trust Security Framework for O-RAN</strong>
         <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi — 2025 IWCMC, pp. 1564–1569</span>
         <a href="https://doi.org/10.1109/IWCMC65282.2025.11059720">DOI</a>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>Securing O-RAN Equipment Using Blockchain-Based Supply Chain Verification</strong><br />
+        <strong>Securing O-RAN Equipment Using Blockchain-Based Supply Chain Verification</strong>
         <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud, B. Brik, L. Khoukhi — 2025 IWCMC, pp. 1570–1575</span>
         <a href="https://doi.org/10.1109/IWCMC65282.2025.11059692">DOI</a>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>Ransomware Threat Mitigation Through Network Traffic Analysis and Machine Learning Techniques</strong><br />
+        <strong>Ransomware Threat Mitigation Through Network Traffic Analysis and Machine Learning Techniques</strong>
         <span class="meta">A. Mehrban, S. Karimi Geransayeh — arXiv, 2401.15285 [cs.CR], 2024</span>
         <a href="https://arxiv.org/abs/2401.15285">arXiv</a>
         <span class="chip">Preprint</span>
       </div>
 
       <div class="pub">
-        <strong>Predicting Stock Market Trends Using Deep Learning: A Case Study of Pakistan Stock Exchange</strong><br />
+        <strong>Predicting Stock Market Trends Using Deep Learning: A Case Study of Pakistan Stock Exchange</strong>
         <span class="meta">M. Balouch, F. Hamayat, H. F. Abbasi, M. Q. Javed, A. Mehrban, R. F. Ahmad — IEEE ICOSST, 2024</span>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>Malware Detection in IoT Systems Using Machine Learning Techniques</strong><br />
+        <strong>Malware Detection in IoT Systems Using Machine Learning Techniques</strong>
         <span class="meta">A. Mehrban, P. Ahadian — IJWMN, Vol. 15, No. 6, Dec 2023</span>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>An Adaptive Network-Based Approach for Advanced Forecasting of Crypto Currency Values</strong><br />
+        <strong>An Adaptive Network-Based Approach for Advanced Forecasting of Crypto Currency Values</strong>
         <span class="meta">A. Mehrban, P. Ahadian — IJCSIT, Vol. 15, No. 6, Dec 2023</span>
         <span class="chip">Published</span>
       </div>
 
       <div class="pub">
-        <strong>Evaluating BERT and ParsBERT for Analyzing Persian Advertisement Data</strong><br />
+        <strong>Evaluating BERT and ParsBERT for Analyzing Persian Advertisement Data</strong>
         <span class="meta">A. Mehrban, P. Ahadian — IJNLC, Vol. 12, No. 2, Apr 2023</span>
         <span class="chip">Published</span>
       </div>
 
-      <h3 style="font-size:20px; margin: 28px 0 16px;">Under Review</h3>
+      <h3 style="font-size:22px; margin: 36px 0 20px; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 12px;">Under Review</h3>
       <div class="pub">
-        <strong>Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</strong><br />
+        <strong>Game-Theoretic Security Orchestration for Open RAN: A Mechanism Design Approach in the SMO</strong>
         <span class="meta">A. Mehrban, Z. Abou El Houda, H. Moudoud, L. Khoukhi — IEEE ICC, 2026</span>
         <span class="chip">Under Review</span>
       </div>
@@ -407,7 +437,10 @@
 
   <!-- Contact -->
   <section id="contact">
-    <h2>Contact</h2>
+    <div class="section-header">
+      <h2>Contact</h2>
+      <div class="line"></div>
+    </div>
     <div class="card contact-info">
       <p>📧 <a href="mailto:a.mehrban@ieee.org">a.mehrban@ieee.org</a>  ·  📧 <a href="mailto:amehrb@gmail.com">amehrb@gmail.com</a></p>
       <p>🔗 <a href="https://www.linkedin.com/in/ali-mehrban/" target="_blank" rel="noopener">linkedin.com/in/ali-mehrban</a></p>
